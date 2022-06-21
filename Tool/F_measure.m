@@ -1,5 +1,6 @@
 function reasult = F_measure(Y, Label)
-% Written by: Ye Zhu
+% Written by Ye Zhu (ye.zhu@ieee.org); Altered by Ruijia Li (ruijia2017@163.com).
+
 
 if min(Label) == 0
     Label = Label+1;
