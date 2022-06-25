@@ -22,8 +22,9 @@ while ~isempty(remainingD)
         Threshold = max(ThresholdNewPoint,[],1);
         temp = min(kNND(NewPoint,:),[],1);
         candidate = find(temp < Threshold);
-        NewPoint = setdiff(candidate,IC{1,c});
-        IC{1,c} = [IC{1,c},NewPoint];
+        DiffusionSet = setdiff(candidate,IC{1,c});
+        IC{1,c} = [IC{1,c},DiffusionSet];
+        NewPoint = DiffusionSet;
     end
     remainingD = setdiff(remainingD,IC{1,c});
 end
