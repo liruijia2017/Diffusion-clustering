@@ -36,7 +36,7 @@ for i = 1:c
 end
 
 %% Assign the remaining point to the initial cluster
-% or regard it as a noise
+% or regard it as a noise (The label of noise is 0)
 kNNDT = kNN(D,T);
 kNNDT(kNNDT==0) = max(r)+1;
 len = length(T);
